@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from .routers.products import routers as products_router
 from .routers.sellers import routers as sellers_router
+from .routers.login import routers as login_router
 
 app = FastAPI(
     title="Products API",
@@ -21,3 +22,4 @@ app = FastAPI(
 
 app.include_router(products_router)
 app.include_router(sellers_router)
+app.include_router(login_router)
